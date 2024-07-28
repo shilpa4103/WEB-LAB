@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Form</title>
+    <script>
+        function validateForm(){
+            var usn=document.getElementById("regno").value;
+            var code=document.getElementById("subcode").value;
+            var m1=parseInt(document.getElementById("marks-1").value);
+            var m2=parseInt(document.getElementById("marks-2").value);
+            var m3=parseInt(document.getElementById("marks-3").value);
+
+            if(m1>20||m2>20||m3>20){
+                alert("Enter valid marks");
+                return;
+            }
+
+            var information=
+            "USN: " + usn + "\n" +
+            "Subject Code: " + code + "\n" +
+            "Marks 1: " + m1 + "\n" +
+            "Marks 2: " + m2 + "\n" +
+            "Marks 3: " + m3 +"\n" ;
+            console.log(information);
+            marks=[m1,m2,m3];
+            marks.sort();
+            var avg=(marks[1]+marks[2])/2;
+            alert(`${avg}`)
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+    <div>
+        <h1>XHTML FORM</h1>
+    </div>
+    <input type="text" id="regno" placeholder="Enter the regNo" required="required"><br>
+    <input type="text" id="subcode" placeholder="Enter the Subject code" required="required"><br>
+    <input type="text" id="marks-1" placeholder="test-1" required="required"><br>
+    <input type="text" id="marks-2" placeholder="test-2" required="required"><br>
+    <input type="text" id="marks-3" placeholder="test-3" required="required"><br>
+    <button type="submit" onclick="validateForm()">Submit</button> 
+</div>
+</body> 
+</html>

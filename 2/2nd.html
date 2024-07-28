@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email">
+        <br>
+        <label for="usn">USN</label>
+        <input type="text" id="usn" name="usn" placeholder="Your usn">
+        <br>
+        <label for="sem">Select Semester</label>
+        <select id="sem" name="sem">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+        <br>
+        <label for="branch">Branch</label>
+        <br>
+        <input type="radio" name="branch" id="branch" value="CS">CSE<br>
+        <input type="radio" name="branch" id="branch" value="IS">ISE<br>
+        <input type="radio" name="branch" id="branch" value="EC">ECE<br>
+        <input type="radio" name="branch" id="branch" value="NC">Non Circuit<br>
+
+        
+        <label for="area">Select </label><br>
+        <input type="checkbox" name="abc" id="area">ABC<br>
+        <input type="checkbox" name="efg" id="area">EFG<br>
+        
+
+        <label for="satisfaction">How satisfied you are</label><br>
+        <input type="range" id="satisfaction" name="sat" min="1" max="5"><br>
+
+        <label>How  many hours</label><br>
+        <input type="number" min="1" max="10"><br>
+
+        <label>Additional Comments</label><br>
+        <textarea placeholder="Your comments"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <script>
+        function validateForm(){
+            var userid=document.getElementById("userid").value;
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+
+            if(userid.length<5||userid.length>12){
+                alert("User ID must be between 5 and 12 characters");
+                return;
+            }
+            if(name.length<10||!/^[a-zA-Z]+$/.test(name)){
+                alert("Name must be atleast 10 characters and contain only alphabets");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <form align="center">
+        <input type="text" id="userid" placeholder="Enter userid">
+        <input type="text" id="name" placeholder="Enter you Name">
+        <input type="text" id="password" placeholder="Enter the password">
+        <input type="email" id="email" placeholder="Enter the email">
+        <button type="submit" onclick="validateForm()">Submit</button>
+    </form>
+</body>
+</html>
