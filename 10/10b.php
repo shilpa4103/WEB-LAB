@@ -2,7 +2,7 @@
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $num=$_POST["num"];
     if($num==1||$num==0){
-        echo "NUmber is neigther prime nor not prime";
+        echo "NUmber is neither prime nor not prime";
         return;
 
     }
